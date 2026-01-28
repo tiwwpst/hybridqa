@@ -1,0 +1,13 @@
+data/*
+!data/sample/
+!data/sample/**
+data/hf/
+data/hybridqa/
+data/index/
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+.git/
+.DS_Store
+__MACOSX/

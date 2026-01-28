@@ -1,0 +1,20 @@
+services:
+  hybridqa-api:
+    build:
+      context: .
+      args:
+        BASE_IMAGE: ${BASE_IMAGE:-python:3.11-slim}
+    ports:
+      - "8000:8000"
+    environment:
+      - HF_HOME=/app/data/hf
+      - HF_HUB_OFFLINE=${HF_HUB_OFFLINE:-0}
+      - HYBRIDQA_OPENAI_API_KEY=${HYBRIDQA_OPENAI_API_KEY:-}
+      - HYBRIDQA_LLM_PROVIDER=${HYBRIDQA_LLM_PROVIDER:-hf_local}
+      - HYBRIDQA_HF_MODEL_ID=${HYBRIDQA_HF_MODEL_ID:-Qwen/Qwen2.5-1.5B-Instruct}
+      - HYBRIDQA_HF_EMBEDDINGS_MODEL=${HYBRIDQA_HF_EMBEDDINGS_MODEL:-sentence-transformers/all-MiniLM-L6-v2}
+      - HYBRIDQA_DATA_DIR=${HYBRIDQA_DATA_DIR:-/app/data/hybridqa}
+      - HYBRIDQA_SAMPLE_DIR=${HYBRIDQA_SAMPLE_DIR:-/app/data/sample}
+      - HYBRIDQA_INDEX_DIR=${HYBRIDQA_INDEX_DIR:-/app/data/index}
+    volumes:
+      - ./data:/app/data

@@ -1,0 +1,22 @@
+# data caches
+data/hf/
+data/hybridqa/
+data/index/
+data/*.bin
+data/*.pt
+data/*.safetensors
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# pytest
+.pytest_cache/
+
+# OS
+.DS_Store
+__MACOSX/
+
+# git
+.git/
