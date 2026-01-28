@@ -12,7 +12,7 @@
 ## Запуск (Docker)
 ```bash
 cd agents_practice
-docker compose up --build
+docker compose up --build```
 
 ##Сервис будет доступен:
 - http://localhost:8000/health
@@ -21,3 +21,4 @@ docker compose up --build
 ##Данные
 - Большие данные и модели не входят в репозиторий.
 - При запуске контейнер скачивает модели и кэши в data/.
+
