@@ -9,11 +9,11 @@
 - Валидный JSON-ответ с function_calls и sources
 - Docker Compose запуск
 
-##Сервис будет доступен:
+## Сервис будет доступен:
 - http://localhost:8000/health
 - http://localhost:8000/docs
 
-##Данные
+## Данные
 - Большие данные и модели не входят в репозиторий.
 - При запуске контейнер скачивает модели и кэши в data/.
 
@@ -21,3 +21,4 @@
 ```bash
 cd agents_practice
 docker compose up --build
+
